@@ -16,8 +16,8 @@
           'ID':profile.getId(),
           'NAME':profile.getName(),
           'PROFILE_PIC':profile.getImageUrl(),
-          'EMAIL':profile.getEmail(),
-          'token':googleUser.getAuthResponse().id_token
+          'EMAIL':profile.getEmail()
+          // 'token':googleUser.getAuthResponse().id_token
         }
         console.log(info_req);
         document.getElementById("info").innerHTML=JSON.stringify(info_req);
@@ -33,6 +33,6 @@
         });
       }
     </script>
-    
+  
   </body>
 </html>
