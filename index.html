@@ -5,10 +5,12 @@
     <script src="https://apis.google.com/js/platform.js" async defer></script>
   </head>
   <body>
-    <div id="info"></div>
+    
     <div class="g-signin2" id="signin-btn" data-onsuccess="onSignIn" data-theme="dark"></div>
     <script>
       function onSignIn(googleUser) {
+        console.log("herere");
+        
         var profile = googleUser.getBasicProfile();
         info_req={
           'ID':profile.getId(),
@@ -21,7 +23,8 @@
         document.getElementById("info").innerHTML=JSON.stringify(info_req);
       }
     </script>
-    <a href="#" style="border-radius: 25px; padding: 20px; background-color:skyblue; margin-top: 20px;" onclick="signOut();">Sign out</a>
+    <div style="border-radius: 25px; padding: 5px; background-color:skyblue; margin-top: 20px; width: 10%; "onclick="signOut();"><a href="#">Sign out</a></div>
+    <div id="info"></div>
     <script>
       function signOut() {
         var auth2 = gapi.auth2.getAuthInstance();
