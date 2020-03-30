@@ -6,7 +6,7 @@ body, html {
 body
 {
     z-index: -1;
-    background-image: url('back.jpg');
+    background-image: url('./img/back.jpg');
     background-position:center;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -57,16 +57,16 @@ body
     transform: skewX(10deg);
 }
 .sidebar {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
     top: 0;
     left: 0;
     background-color: #111;
     overflow-x: hidden;
+    z-index: 1;
+    height: 100%;
+    width: 0;
+    position: fixed;
     transition: 0.5s;
-    padding-top: 60px;
+    padding-top: 50px;
   }
   
   .sidebar a {
@@ -105,7 +105,7 @@ body
   }
   
   #wrap {
-    transition: margin-left .5s;
+    transition: margin-left .7s;
     padding: 16px;
     /* width: 70%; */
   }
