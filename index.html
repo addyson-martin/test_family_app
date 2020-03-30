@@ -32,7 +32,13 @@
     </script>
   </head>
   <body>
+    <div class="nav-bar">
+      <a class="g-signin2"   data-onsuccess="onSignIn" data-theme="dark"></a>
+      <a href="#" onclick="signOut()">Sign out</a>
+      
+    </div>
     <div id="wrap">
+      
       <button class="openbtn" onclick="o_menu()"><i class="fa fa-bars"></i></button>
       <div id="mySidebar" class="sidebar">
         <a class="closebtn" onclick="c_menu()"><i class="fa fa-close"></i></a>
@@ -41,8 +47,8 @@
       </div>
     <div id="signin-method-skew">
       <div id='signin-method'>
-    <div class="g-signin2" id="signin-btn" data-onsuccess="onSignIn" data-theme="dark"></div>
-    <div style="border-radius: 25px; left:0; padding: 5px; background-color:skyblue; margin-top: 20px; width: 40%; "onclick="signOut();"><a href="#">Sign out</a></div>
+    <!-- <div class="g-signin2" id="signin-btn" data-onsuccess="onSignIn" data-theme="dark"></div>
+    <div style="border-radius: 25px; left:0; padding: 5px; background-color:skyblue; margin-top: 20px; width: 40%; "onclick="signOut();"><a href="#">Sign out</a></div> -->
   </div>  
   </div>
     <div id="info"></div>

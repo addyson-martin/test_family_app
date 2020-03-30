@@ -13,6 +13,30 @@ body
     background-size: cover;
     height: 100%;
 }
+.nav-bar {
+    overflow: hidden;
+    background-color:rgba(0,0 , 0,0.4);
+  }
+  
+  .nav-bar a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    height: 5%;
+  }
+  
+  .nav-bar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .nav-bar a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
 #signin-method-skew
 {
     /* text-align: center;    */
@@ -20,7 +44,7 @@ body
     width:30%;
     right: 0;
     position: fixed;
-    top:0;
+    top:0%;
     height: 100%;
     margin-left: 70%;
     transform-origin: bottom right;
