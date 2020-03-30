@@ -3,10 +3,9 @@
     <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="1007036031927-4c22fl6it928h5icd712fls15cgodffd.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-  </head>
-  <body>
-    
-    <div class="g-signin2" id="signin-btn" data-onsuccess="onSignIn" data-theme="dark"></div>
+    <script src="effects.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
     <script>
       function onSignIn(googleUser) {
         console.log("herere");
@@ -20,19 +19,35 @@
           // 'token':googleUser.getAuthResponse().id_token
         }
         console.log(info_req);
-        document.getElementById("info").innerHTML=JSON.stringify(info_req);
+        // document.getElementById("info").innerHTML=JSON.stringify(info_req);
+        alert(JSON.stringify(info_req))
+
       }
-    </script>
-    <div style="border-radius: 25px; padding: 5px; background-color:skyblue; margin-top: 20px; width: 10%; "onclick="signOut();"><a href="#">Sign out</a></div>
-    <div id="info"></div>
-    <script>
       function signOut() {
         var auth2 = gapi.auth2.getAuthInstance();
         auth2.signOut().then(function () {
-          console.log("go u r out");
+          alert("go u r out");
         });
       }
     </script>
+  </head>
+  <body>
+    <div id="wrap">
+      <button class="openbtn" onclick="o_menu()"><i class="fa fa-bars"></i></button>
+      <div id="mySidebar" class="sidebar">
+        <a class="closebtn" onclick="c_menu()"><i class="fa fa-close"></i></a>
+        <a href="#">About Us</a>
+        <a href="#">Go Corona</a>
+      </div>
+    <div id="signin-method-skew">
+      <div id='signin-method'>
+    <div class="g-signin2" id="signin-btn" data-onsuccess="onSignIn" data-theme="dark"></div>
+    <div style="border-radius: 25px; left:0; padding: 5px; background-color:skyblue; margin-top: 20px; width: 40%; "onclick="signOut();"><a href="#">Sign out</a></div>
+  </div>  
+  </div>
+    <div id="info"></div>
+    </div>
+    
   
   </body>
 </html>

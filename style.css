@@ -1,0 +1,88 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+body
+{
+    z-index: -1;
+    background-image: url('back.png');
+    background-position:center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+#signin-method-skew
+{
+    /* text-align: center;    */
+    background-color: rgba(0,0 , 0,0.4);
+    width:30%;
+    right: 0;
+    position: fixed;
+    top:0;
+    height: 100%;
+    margin-left: 70%;
+    transform-origin: bottom right;
+    transform: skewX(-10deg);
+}
+#signin-method
+{
+    margin-left: 4%;
+    margin-top: 10%;
+    transform: skewX(10deg);
+}
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    text-decoration: none;
+    /* background-color: black; */
+    margin-left: 50px;
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+  
+  #wrap {
+    transition: margin-left .5s;
+    padding: 16px;
+    /* width: 70%; */
+  }
+  
