@@ -17,6 +17,7 @@ body
 .nav-bar {
     overflow: hidden;
     background-color:rgba(0,0 , 0,0.4);
+    /* z-index: 10; */
   }
   
   .nav-bar a {
@@ -45,7 +46,7 @@ body
     width:30%;
     right: 0;
     position: fixed;
-    top:0%;
+    top:9.25%;
     height: 100%;
     margin-left: 70%;
     transform-origin: bottom right;
@@ -116,12 +117,13 @@ body
 
 #signOut-btn
 {
-  /* margin-left: 30%; */
+  /* margin-left: 70%; */
   border-style: none;
   border-radius: 10px;
   padding: 10px 10px;
   display: none;
   float: right;
+
 }
 #signOut-btn:hover
 {
