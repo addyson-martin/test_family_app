@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body { margin: 0; padding: 0; }
+	#map { position: absolute; top: 0; bottom: 0; width: 100%; };
+    </style>
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="1007036031927-4c22fl6it928h5icd712fls15cgodffd.apps.googleusercontent.com">
+  </head>
+  <body>
+	<h1>simple app</h1>
+   
+    <div id="map"></div>
+<script>
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+function showPosition(position) {
+  var lat_map= position.coords.latitude;
+  var long_map=position.coords.longitude; 
+  var coor = {lat: lat_map, lng: long_map};
+  var map = new google.maps.Map(
+      document.getElementById('map'), {zoom: 18, center: coor});
+  var marker = new google.maps.Marker({position: coor, map: map});
+}
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCDXLcsPEOaMGwsu6W-kWNrLNUC8RD5_P0&callback=getLocation">
+    </script>
+  </body>
+</html>

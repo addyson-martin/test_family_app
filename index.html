@@ -1,0 +1,70 @@
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="1007036031927-4c22fl6it928h5icd712fls15cgodffd.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+
+    <script src="./effect/effects.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script>
+      function onSignIn(googleUser) {
+        console.log("herere");
+        createSignOut();
+        var profile = googleUser.getBasicProfile();
+        const info_req={
+          'ID':profile.getId(),
+          'NAME':profile.getName(),
+          'PROFILE_PIC':profile.getImageUrl(),
+          'EMAIL':profile.getEmail()
+          // 'token':googleUser.getAuthResponse().id_token
+        }
+        // console.log(info_req);
+        alert(JSON.stringify(info_req))
+
+      }
+      function signOut() {
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function () {
+          alert("Your SignOut was Successful ;))");
+        });
+        document.getElementById("signOut-btn").style.display="none";
+      }
+    </script>
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+
+  </head>
+  <body>
+    <div class="nav-bar">
+
+      <a id="details-after-login">Name and details here on this NAV BAR</a>
+      <button id="signOut-btn" onclick="signOut()">Sign out</button>
+
+      
+    </div>
+    <div id="wrap" class="blurme" >
+      
+      <button class="openbtn" onclick="o_menu()"><i class="fa fa-bars"></i></button>
+      <div id="mySidebar" class="sidebar">
+        <a class="closebtn" onclick="c_menu()"><i class="fa fa-close"></i></a>
+        <a href="#" class="changeme visibility">About Us</a>
+        <a href="https://www.instagram.com/sameer_utradhi/" class="changeme visibility">Contact</a>
+      </div>
+      
+    <div id="signin-method-skew">
+      <div id='signin-method'>
+        <div id="all-button-for-login">
+          <!--THIS WILL SHOW NO SKEW CONTENT INSIDE THE RIGHT HAND SIDE SKWED DIV-->
+          <div class="g-signin2"  id="g-signin-btn" data-longtitle="true" data-onsuccess="onSignIn" data-theme="dark"></div>
+        </div>  
+      </div>  
+    </div>
+     </div>
+     <center>
+      <div class="center-content-box" id="cntr-box">Put your GPS to work for your , not your memory!<br>Get started with Us.<br>
+        <button id="centre-btn" onclick="blurEffect('wrap')">Get Started</button>
+      <div>
+      </center>
+  </body>
+</html>
