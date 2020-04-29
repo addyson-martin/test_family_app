@@ -1,0 +1,24 @@
+{
+  "name": "nodemon-vesion",
+  "version": "1.0.0",
+  "description": "We just use an API as of now.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adirocker78/test_family_app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adirocker78/test_family_app/issues"
+  },
+  "homepage": "https://github.com/adirocker78/test_family_app#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.1.1"
+  }
+}

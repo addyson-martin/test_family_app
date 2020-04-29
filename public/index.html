@@ -1,0 +1,44 @@
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="1007036031927-4c22fl6it928h5icd712fls15cgodffd.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+    <script src="./effect/effects.js"></script>
+    <script src="./effect/gauth.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" defer>
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body onload="setDefaults()">
+    <div class="nav-bar">
+      <a><img id=pro_pic alt="profile image"></a>
+      <a id="details-after-login">Name and details here on this NAV BAR</a>
+      <button id="signOut-btn" onclick="signOut()">Sign out</button>
+    </div>
+    <div id="wrap" class="blurme" >
+      
+      <button class="openbtn" onclick="o_menu()"><i class="fa fa-bars"></i></button>
+      <div id="mySidebar" class="sidebar">
+        <a class="closebtn" onclick="c_menu()"><i class="fa fa-close"></i></a>
+        <a href="#" class="changeme visibility">About Us</a>
+        <a href="https://www.instagram.com/sameer_utradhi/" class="changeme visibility">Contact</a>
+      </div>
+      
+    <div id="signin-method-skew">
+      <div id='signin-method'>
+        <div id="all-button-for-login">
+          <!--THIS WILL SHOW NO SKEW CONTENT INSIDE THE RIGHT HAND SIDE SKWED DIV-->
+          <div class="g-signin2"  id="g-signin-btn" data-longtitle="true" data-onsuccess="onSignIn" data-theme="dark"></div>
+        </div>  
+      </div>  
+    </div>
+     </div>
+     <!-- wrapper ends -->
+     <center>
+      <div class="center-content-box" id="cntr-box"><div id="mssg">Put your GPS to work for your , not your memory!<br>Get started with Us.<br></div>
+        <button id="centre-btn" onclick="blurEffect('wrap')"><div id="btn-data">Get Started</div></button>
+      <div>
+      </center>
+  </body>
+</html>

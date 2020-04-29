@@ -10,13 +10,9 @@ Installing the dependencies:
 ```sh
 $ npm install
 ```
-Development mode:
+Running the server:
 
 ```sh
-$ npm run start
+$ npm start
 ```
-Production mode: 
 
-```sh
-$ npm run build
-```
