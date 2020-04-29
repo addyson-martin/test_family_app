@@ -11,6 +11,7 @@ Installing the dependencies:
 $ npm install
 ```
 Running the server:
+@sammer child process are not supported by npm start--- change dir to src and then node/nodemon app.js
 
 ```sh
 $ npm start
