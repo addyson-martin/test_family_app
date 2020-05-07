@@ -27,8 +27,9 @@ len_list=len(send_to_email)
 fp=open('response.txt','a')
 # print(names,send_to_email)
 server = smtplib.SMTP('smtp.gmail.com', 587)
+otp=get_otp()
 subject = "Otp for family app"
-body="Your otp is "+get_otp()
+body="Your otp is :"+ otp
 server.starttls()
 
 server.login(sender_mail, sender_pass)
@@ -37,6 +38,6 @@ for i in range(len_list):
     message = 'Subject: {}\n\n{}'.format(subject,body_temp)
     send(fp,server,sender_mail,send_to_email[i],message,sent_status)
 server.quit()
-print("Email Sent Successfully!")
-print(sent_status)
+print("Email Sent Successfully! otp is:",otp)
+#print(sent_status)
 fp.close()

@@ -51,12 +51,11 @@ app.get('/location_page',(req,res)=>
     res.send("this is a location pages")
 })
 
-app.get('/sendmail',(req,res)=>{
-    const otp=mailSmtp(cred.name,cred.mail,res)
-    console.log("otp from here"+otp);
+app.get('/sendmail',async (req,res)=>{
+    const otp= await mailSmtp(cred.name,cred.mail,res)
+    console.log(otp);
     
 }
-
 )
 app.get("/chatroom",(req,res)=>
 {
