@@ -14,6 +14,6 @@ Running the server:
 child process are not supported by npm start--- change dir to src and then node/nodemon app.js
 
 ```sh
-$ npm start
+$ node src/app.js
 ```
 
